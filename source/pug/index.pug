@@ -1,0 +1,15 @@
+extends templates/titular
+block variables
+	- let pageTitle = 'Разводящая страница проекта';
+	- let isHome = false; //- Если true то логотип не будет ссылкой
+
+block content
+	.container
+		h1 RAMMP
+		ul
+			each item in TITULAR_MENU
+				li
+					a(href= item.url)= item.text
+
+
+

@@ -1,0 +1,54 @@
+-
+	//- Массив с именами файлов шрифтов, которые подключаются для предзагрузки в теге head миксином fonts
+	let FONTS = [
+		'Jost-Light',
+		'Jost-Regular',
+		'Jost-SemiBold',
+		'Jost-Italic',
+		'Cinzel-Regular'
+	];
+
+	let TITLE_PART = 'RAMMP';
+
+	let URLS = {
+		home: 'home.html',
+		about: 'about.html',
+		services: '#',
+		price: 'price.html',
+		contact: 'contacts.html',
+		catalog: '#',
+		product: '#'
+	};
+
+	let TITULAR_MENU = [
+		{text: 'Главная', url: URLS.home, currentPage: 1.01, currentSection: 1},
+		{text: 'О Компании', url: URLS.about, currentPage: 2.01, currentSection: 2},
+		{text: 'Услуги', url: URLS.services, currentPage: 3.01, currentSection: 3},
+		{text: 'Прайс-лист', url: URLS.price, currentPage: 4.01, currentSection: 4},
+		{text: 'Контакты', url: URLS.contact, currentPage: 5.01, currentSection: 5}
+	];
+
+	let MAIN_MENU = [
+		{text: 'Главная', url: URLS.home, currentPage: 1.01, currentSection: 1},
+		{text: 'О Компании', url: URLS.about, currentPage: 2.01, currentSection: 2},
+		{text: 'Услуги', url: URLS.services, currentPage: 3.01, currentSection: 3},
+		{text: 'Прайс-лист', url: URLS.price, currentPage: 4.01, currentSection: 4},
+		{text: 'Контакты', url: URLS.contact, currentPage: 5.01, currentSection: 5}
+	];
+
+	let CATALOG_LIST = [
+		{text: 'Арматура', img: '1', url: URLS.product},
+		{text: 'Балка', img: '2', url: URLS.product},
+		{text: 'Катанка', img: '3', url: URLS.product},
+		{text: 'Квадрат', img: '4', url: URLS.product},
+		{text: 'Круг', img: '5', url: URLS.product},
+		{text: 'Лист', img: '6', url: URLS.product},
+		{text: 'Труба профильная', img: '7', url: URLS.product},
+		{text: 'Полоса', img: '8', url: URLS.product},
+		{text: 'Труба', img: '9', url: URLS.product},
+		{text: 'Уголок', img: '10', url: URLS.product},
+		{text: 'Швеллер', img: '11', url: URLS.product},
+		{text: 'Вся продукция', img: null, url: URLS.catalog}
+	];
+
+

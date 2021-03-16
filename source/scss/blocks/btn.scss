@@ -1,0 +1,6 @@
+.btn {
+	@extend .button;
+
+	display: inline-flex !important;
+	min-width: 152px;
+}

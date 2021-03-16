@@ -1,0 +1,8 @@
+.webpage {
+	$self: &;
+
+
+	&--hidden {
+		overflow: hidden !important;
+	}
+}

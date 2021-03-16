@@ -1,0 +1,67 @@
+$width--full: 1830px;
+$width--large: 1550px;
+$width--small: 760px;
+
+// Colors
+//---------------------------------
+$color-default-white: #ffffff;
+$color-default-black: #000000;
+
+//$color-main: #616161;
+$color-dark: #0E1317;
+$color-dark2: #2C343D;
+//$color-smoky: #f5f5f5;
+
+$color-orange: #FF5722;
+$color-blue: #1685F4;
+
+$color-base: $color-default-black; // основной цвет текста, используется в миксине text()
+
+// Typography
+//--------------   $font-family, $file-name, $weight, $style: normal
+
+//
+$fonts: "Inter" "inter-regular" 400 normal, "Inter" "inter-medium" 500 normal,
+				"Inter" "inter-semibold" 600 normal, "Inter" "inter-bold" 700 normal;
+
+$font-family--main: "Inter", "Arial", sans-serif;
+//$font-family--secondary: "Roboto", "Open Sans", sans-serif;
+
+$font-size-base: 15px;
+$line-height-base: 1.33333; //22px
+
+/////////////////////////////
+$default-transition-settings: 0.3s ease;
+
+///////////////////////////////
+
+// Viewports
+//---------------------------------
+
+$breakpoints: (
+	default: "default",
+	xs: 375px,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1560px,
+	xxx: 1920px,
+) !default;
+
+// container max width
+$containerMaxWidths: (
+	xs: 100%,
+	sm: 576px,
+	md: 720px,
+	lg: 960px,
+	xl: 990px,
+	xxl: 990px,
+	xxx: 990px,
+) !default;
+
+// Retina
+//---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
