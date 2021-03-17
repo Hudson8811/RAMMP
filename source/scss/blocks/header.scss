@@ -61,6 +61,10 @@
 			flex-shrink: 0;
 			margin-right: 5.27777vw;
 		}
+
+		@include media(xl) {
+			margin-right: 76px;
+		}
 	}
 
 	&__site-name {

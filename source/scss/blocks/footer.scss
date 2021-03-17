@@ -1,11 +1,16 @@
 .footer {
 	$self: &;
-	padding-top: 32px;
-	padding-bottom: 16px;
+	padding: 40px 0;
 	background-color: $color-dark2;
 
+	@include media(lg) {
+		padding: 80px 0;
+	}
+
 	&__inner {
-		position: relative;
+		@include media(sm) {
+			display: flex;
+		}
 
 		@include media(md) {
 		}
@@ -17,32 +22,126 @@
 		}
 	}
 
-	&__social {
-		margin-top: 20px;
+	&__logo {
+		display: none;
 
-		@include media(lg) {
-			margin-top: 31px;
+		@include media(sm) {
+			display: block;
+			margin-right: 60px;
+		}
+
+		@include media(md) {
+			display: block;
+			margin-right: 9.16666vw;
+		}
+
+		@include media(xl) {
+			margin-right: 132px;
 		}
 	}
 
-	&__copy {
-		width: 100%;
-		margin-bottom: 16px;
+	&__menu {
+		$menu: &;
+		display: none;
 
-		@include text(12px, 1.166);
+		@include media(md) {
+			@include list-reset;
+
+			display: block;
+			margin: 0 auto;
+		}
 
 		@include media(lg) {
-			width: auto;
-			margin-bottom: 0;
+			columns: 2;
+			column-gap: 4.86111vw;
+		}
+
+		@include media(xl) {
+			column-gap: 70px;
+		}
+
+		&-item {
+			margin-bottom: 8px;
+
+			@include media(lg) {
+				margin-bottom: 28px;
+			}
+
+			&--current {
+				#{$menu}-link {
+					opacity: 1;
+
+					&:not([href]) {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		&-link {
+			@include text(13px, 1.23076);
+			font-weight: 500;
+			text-transform: uppercase;
+			opacity: 0.5;
+
+			@include transition(opacity);
+
+			@include hover {
+				opacity: 1;
+			}
 		}
 	}
 
-	&__privacy {
-		@include text(12px, 1.166);
-		text-decoration: underline;
+	&__contacts {
+	}
+
+	&__phone {
+		display: inline-block;
+		vertical-align: top;
+		padding-bottom: 7px;
+
+		@include text(32px, 1.25);
+		letter-spacing: 0.0044em;
+		font-weight: 600;
+		border-bottom: dashed 1px rgba($color-default-white, 0.6);
+
+		@include transition(all);
 
 		@include hover {
-			text-decoration: none;
+			border-bottom-style: solid;
+			border-bottom-color: $color-default-white;
+		}
+	}
+
+	&__worktime {
+		margin-top: 16px;
+		margin-bottom: 32px;
+
+		@include text();
+		letter-spacing: -0.0022em;
+		opacity: 0.6;
+	}
+
+	&__address {
+		margin-bottom: 32px;
+
+		@include text();
+		letter-spacing: -0.0022em;
+		font-style: normal;
+	}
+
+	&__email {
+		padding-bottom: 4px;
+
+		@include text(16px, 1.25);
+		letter-spacing: -0.0028em;
+		border-bottom: dashed 1px rgba($color-default-white, 0.6);
+
+		@include transition(all);
+
+		@include hover {
+			border-bottom-style: solid;
+			border-bottom-color: $color-default-white;
 		}
 	}
 }
