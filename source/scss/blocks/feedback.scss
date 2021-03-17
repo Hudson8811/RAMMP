@@ -1,0 +1,74 @@
+.feedback {
+	padding: 40px 0;
+	background-color: $color-blue;
+
+	@include media(lg) {
+		padding: 112px 0 80px;
+	}
+
+	&__heading {
+		margin: 0 0 8px;
+
+		@include text(24px, 1.16666);
+	}
+
+	&__field {
+		margin-bottom: 25px;
+
+		&--half {
+			width: calc(50% - 6px);
+
+			@include media(lg) {
+				width: calc(50% - 10px);
+			}
+		}
+	}
+
+	&__form {
+		&-text {
+			margin-bottom: 25px;
+
+			@include text();
+			letter-spacing: -0.0022em;
+		}
+
+		&-bottom {
+			width: 100%;
+			margin-top: 7px;
+		}
+
+		&-consent {
+			@include text(14px, 1.28571);
+			letter-spacing: -0.0016em;
+			text-align: center;
+		}
+
+		form {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			button[type="submit"] {
+				@extend .btn;
+
+				display: block;
+				width: 100%;
+				min-width: 200px;
+				margin-bottom: 16px;
+				box-shadow: 0 0 0 1px rgba($color-default-white, 0.2);
+			}
+		}
+	}
+
+	form {
+		button[type="submit"] {
+			@extend .btn;
+
+			display: block;
+			width: 100%;
+			min-width: 200px;
+			margin-bottom: 16px;
+			box-shadow: 0 0 0 1px rgba($color-default-white, 0.2);
+		}
+	}
+}

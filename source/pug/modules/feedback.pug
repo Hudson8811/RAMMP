@@ -1,0 +1,22 @@
+section.feedback
+	.feedback__inner.container.container--small
+		h2.feedback__heading Оставить заявку
+		.feedback__form
+			.feedback__form-text Оставьте свои контакты и мы свяжемся с вами, как можно скорее
+			form(action="#", method="post")
+				label.feedback__field.feedback__field--half.field
+					input(type="text", name="name")
+					span.field__hint Имя
+					span.field__message
+				label.feedback__field.feedback__field--half.field
+					input(type="tel", name="phone", requred)
+					span.field__hint Номер телефона
+					span.field__message
+				label.feedback__field.field
+					input(type="email", name="email")
+					span.field__hint E-mail
+					span.field__message
+
+				.feedback__form-bottom
+					button(type="submit") Отправить
+					.feedback__form-consent Нажимая на кнопку, вы даете согласие на обработку персональных данных

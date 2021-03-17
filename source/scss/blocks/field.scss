@@ -4,192 +4,38 @@
 	position: relative;
 	display: block;
 	width: 100%;
-	cursor: text;
 
-	input[type="text"],
-	input[type="email"],
+	input,
 	textarea,
-	.select {
+	select {
 		display: block;
 		width: 100%;
-		padding: 26px 15px 26px 0;
-		border-bottom: 3px solid rgba($color-pale-sky, 0.12);
+		padding: 11px 0;
+
+		@include text();
+		letter-spacing: -0.0022em;
+		border: none;
+		border-bottom: solid 1px rgba($color-default-white, 0.5);
+		background-color: transparent;
 		appearance: none;
-		color: $color-gray-f9;
-		box-sizing: border-box;
-		@include text(14px, 1);
 
-		&::placeholder {
-			@include text(14px, 1);
-			letter-spacing: -0.2px;
-			color: $color-gray-bb;
-			opacity: 1;
-		}
+		@include transition(border-bottom-color);
 
-		&:focus {
-			color: $color-gray-f9;
-			background-color: $color-dark2;
-
-			&::placeholder {
-				opacity: 0;
-			}
+		@include hover {
+			border-bottom-color: $color-default-white;
 		}
 	}
 
-	textarea {
-		resize: none;
+	&__hint {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+
+		@include text();
+		letter-spacing: -0.0022em;
 	}
 
-	&--radio {
-		display: flex;
-		align-items: center;
-		width: auto;
-		cursor: pointer;
-
-		input[type="radio"] {
-			display: none;
-
-			&:checked + .inner {
-				border-color: $color-blue;
-
-				&::after {
-					opacity: 1;
-				}
-			}
-		}
-
-		span.inner {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 18px;
-			height: 18px;
-			border: 2px solid $color-gray-bb;
-			border-radius: 50%;
-			margin-right: 11px;
-			padding-right: 0;
-			box-sizing: border-box;
-
-			@include media(lg) {
-				margin-right: 8px;
-			}
-
-			&::after {
-				content: "";
-				display: block;
-				width: 8px;
-				height: 8px;
-				border-radius: 50%;
-				background-color: $color-blue;
-				opacity: 0;
-			}
-		}
-
-		span {
-			display: inline-block;
-			font-family: $font-family--secondary;
-			font-size: 14px;
-			color: $color-gray-bb;
-		}
-	}
-
-	&--switch {
-		display: flex;
-		align-items: center;
-		width: auto;
-		cursor: pointer;
-
-		span {
-			padding-right: 27px;
-			font-family: $font-family--secondary;
-			font-size: 14px;
-			color: $color-gray-bb;
-
-			@include media(lg) {
-				padding-right: 17px;
-			}
-		}
-
-		input[type="checkbox"] {
-			display: none;
-
-			&:checked + .inner {
-				background-color: $color-dark-blue;
-
-				&::after {
-					transform: translateX(100%);
-					background-color: $color-light-blue;
-				}
-			}
-		}
-
-		span.inner {
-			display: flex;
-			align-items: center;
-			width: 35px;
-			height: 14px;
-			padding-right: 0;
-			background-color: $color-gray-99;
-			border-radius: 8px;
-			cursor: pointer;
-			@include transition(background-color);
-
-			&::after {
-				content: "";
-				display: block;
-				width: 20px;
-				height: 20px;
-				border-radius: 50%;
-				background-color: $color-gray-ee;
-				box-shadow: 0 0 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.23);
-				transform: translateX(-3px);
-				@include transition(all);
-			}
-		}
-	}
-
-	&--checkbox {
-		label {
-			position: relative;
-			display: inline-block;
-			vertical-align: top;
-			padding-left: 26px;
-			line-height: 1.428;
-			font-family: $font-family--secondary;
-			cursor: pointer;
-
-			&::before {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 18px;
-				height: 18px;
-				border: solid 1px $color-gray-e5;
-				background-color: $color-gray-e5;
-
-				@include transition(border-color);
-			}
-		}
-
-		input:focus + label,
-		&:hover label {
-			&::before {
-				border-color: darken($color-gray-e5, 20%);
-			}
-		}
-
-		input:checked + label {
-			&::after {
-				content: "";
-				position: absolute;
-				top: 4px;
-				left: 3px;
-				width: 12px;
-				height: 10px;
-				background-repeat: no-repeat;
-				background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M4.512 9.5a.548.548 0 01-.403.18.548.548 0 01-.403-.18L.489 6.024a.976.976 0 010-1.305l.403-.435a.81.81 0 011.208 0l2.009 2.17L9.536.59a.81.81 0 011.209 0l.403.435a.976.976 0 010 1.305L4.512 9.5z' fill='%2301A5E4'/%3e%3c/svg%3e");
-			}
-		}
+	&__message {
 	}
 }
