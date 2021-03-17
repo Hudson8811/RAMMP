@@ -391,7 +391,7 @@ body {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  background-color: #0E1317;
+  background-color: #0e1317;
   min-width: 375px;
   min-height: 100vh;
   margin: 0;
@@ -459,7 +459,7 @@ a {
   width: 9px;
   height: 9px;
   margin: 0 2px;
-  background-color: #1685F4;
+  background-color: #1685f4;
 }
 
 .swiper-pagination-bullet:hover, .swiper-pagination-bullet:focus {
@@ -506,7 +506,7 @@ a {
   font-weight: 500;
   border: none;
   border-radius: 30px;
-  background-color: #1685F4;
+  background-color: #1685f4;
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
@@ -566,7 +566,7 @@ a {
 }
 
 .menu-toggle:hover svg, .menu-toggle:focus svg {
-  fill: #1685F4;
+  fill: #1685f4;
 }
 
 /* Blocks */
@@ -631,9 +631,147 @@ a {
     font-size: 14px;
   }
   .menu__link:hover, .menu__link:focus {
-    color: #1685F4;
+    color: #1685f4;
     text-decoration: none;
   }
+}
+
+.advantages--limited {
+  background-color: transparent;
+}
+
+.advantages__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  padding: 16px 20px;
+  background-color: #2c3239;
+  background-image: radial-gradient(50% 8005.99% at 50% 50%, #374048 0%, rgba(44, 50, 57, 0) 100%);
+}
+
+@media (min-width: 576px) {
+  .advantages__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .advantages__list {
+    margin-left: -20px;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+  }
+}
+
+@media (min-width: 992px) {
+  .advantages__list {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advantages__list {
+    width: 100%;
+    margin-left: 0;
+    padding: 20px 0;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  margin-bottom: 16px;
+  padding-left: 44px;
+  padding-bottom: 16px;
+  border-bottom: solid 1px #424a54;
+}
+
+@media (min-width: 576px) {
+  .advantages__item {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (min-width: 768px) {
+  .advantages__item {
+    width: calc(33.33% - 20px);
+    margin-left: 20px;
+  }
+  .advantages__item:nth-last-child(2) {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advantages__item {
+    width: 20%;
+    margin-left: 0;
+    padding: 0 20px 0 64px;
+    border-bottom: none;
+    border-left: solid 1px #424a54;
+  }
+  .advantages__item:first-child {
+    border-left: none;
+  }
+}
+
+.advantages__item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.advantages__item-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.advantages__item-icon svg {
+  fill: #ffffff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (min-width: 1200px) {
+  .advantages__item-icon {
+    left: 20px;
+  }
+}
+
+.advantages__item-title {
+  margin-bottom: 4px;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #ffffff;
+  letter-spacing: 0.0038em;
+  font-weight: 600;
+}
+
+.advantages__item-text {
+  font-size: 14px;
+  line-height: 1.28571;
+  color: #ffffff;
+  letter-spacing: -0.0016em;
 }
 
 .header {
@@ -735,7 +873,7 @@ a {
   height: 100vh;
   min-height: 480px;
   padding: 40px 40px 100px;
-  background-color: #1685F4;
+  background-color: #1685f4;
 }
 
 .header__canvas-inner {
@@ -820,7 +958,7 @@ a {
 }
 
 .header__menu-close:hover svg, .header__menu-close:focus svg {
-  fill: #0E1317;
+  fill: #0e1317;
 }
 
 @media (min-width: 992px) {
@@ -873,7 +1011,7 @@ a {
 
 @media (min-width: 992px) {
   .header__phone:hover, .header__phone:focus {
-    color: #1685F4;
+    color: #1685f4;
     text-decoration: none;
   }
 }
@@ -922,7 +1060,7 @@ a {
 
 .footer {
   padding: 40px 0;
-  background-color: #2C343D;
+  background-color: #2c343d;
 }
 
 @media (min-width: 992px) {

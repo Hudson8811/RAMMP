@@ -8,12 +8,15 @@ $color-default-white: #ffffff;
 $color-default-black: #000000;
 
 //$color-main: #616161;
-$color-dark: #0E1317;
-$color-dark2: #2C343D;
+$color-dark: #0e1317;
+$color-dark2: #2c343d;
+$color-dark3: #2c3239;
 //$color-smoky: #f5f5f5;
 
-$color-orange: #FF5722;
-$color-blue: #1685F4;
+$color-grey: #424a54;
+
+$color-orange: #ff5722;
+$color-blue: #1685f4;
 
 $color-base: $color-default-white; // основной цвет текста, используется в миксине text()
 
@@ -22,7 +25,7 @@ $color-base: $color-default-white; // основной цвет текста, и
 
 //
 $fonts: "Inter" "inter-regular" 400 normal, "Inter" "inter-medium" 500 normal,
-				"Inter" "inter-semibold" 600 normal, "Inter" "inter-bold" 700 normal;
+	"Inter" "inter-semibold" 600 normal, "Inter" "inter-bold" 700 normal;
 
 $font-family--main: "Inter", "Arial", sans-serif;
 //$font-family--secondary: "Roboto", "Open Sans", sans-serif;

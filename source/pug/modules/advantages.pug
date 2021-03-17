@@ -1,0 +1,8 @@
+section.advantages.advantages--limited.advantages--shift-up
+	ul.advantages__list
+		each item in ADVANTAGES
+			li.advantages__item
+				.advantages__item-icon
+					+icon(item.icon.id)(width= item.icon.w, height= item.icon.h)
+				.advantages__item-title= item.title
+				.advantages__item-text= item.text
