@@ -2,14 +2,12 @@
 	$self: &;
 
 	display: block;
-	width: 121px;
+	width: 91px;
 
 	@include transition(opacity);
 
 	img {
-		display: block;
-		width: 100%;
-		height: auto;
+		@include image-block;
 	}
 
 	&[href]:hover,
