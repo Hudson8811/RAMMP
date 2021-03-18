@@ -1,0 +1,18 @@
+mixin catalog-card(item, cl)
+	- let cls = cl ? cl + ' ' : '';
+	- let tg = item.tag ? item.tag : 'div';
+	- modCl = item.more ? ' catalog-card--more' : '';
+
+	#{tg}(class= cls + 'catalog-card' + modCl)
+		if item.more
+			a.catalog-card__content(href= item.url)
+				span.catalog-card__text= item.text
+					span.catalog-card__text-icon
+						+icon('arrow-right')(width="9", height="16")
+		else
+			.catalog-card__image
+				img(src="img/catalog/" + item.img + ".png", srcset="img/catalog/" + item.img + "@2x.png", width="425", height="220", alt="")
+			a.catalog-card__content(href= item.url)
+				span.catalog-card__title= item.text
+				span.catalog-card__icon
+					+icon('arrow-right')(width="9", height="16")

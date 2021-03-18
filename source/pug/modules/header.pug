@@ -1,27 +1,37 @@
-header.header#header
-	.header__inner
+- let headerAddClass = isHome ? 'header--absolute' : '';
+header.header(class= headerAddClass)
+	.header__inner.container
 		+logo(isHome, 'header__logo')
+		.header__site-name Раменский металлопрокат
 
-		.header__contacts
-			a.header__phone(href="tel:+74951503400") +7 (495) 150-34-00
-			a.header__email(href="mailto:email@glassproekt.ru") email@glassproekt.ru
+		.header__canvas.__js_menu
+			.header__canvas-inner
+				button.header__menu-close.__js_menu-close(type="button")
+					+icon('close')(width="18", height="18")
+					span.visually-hidden Скрыть меню сайта
+
+				nav.header__menu.menu
+					ul.menu__list
+						each item in MAIN_MENU
+							if item.currentSection === currentSection && item.currentPage === currentPage
+								li.menu__item.menu__item--current
+									a.menu__link= item.text
+							else if item.currentSection === currentSection && item.currentPage !== currentPage
+								li.menu__item.menu__item--current
+									a.menu__link(href= item.url)= item.text
+							else
+								li.menu__item
+									a.menu__link(href= item.url)= item.text
 
 
-		ul.header__menu.header-menu
-			each item in HEADER_MENU
-				if item.currentSection === currentSection && item.currentPage === currentPage
-					li.header-menu__item.header-menu__item--current
-						a.header-menu__link= item.text
-				else if item.currentSection === currentSection && item.currentPage !== currentPage
-					li.header-menu__item.header-menu__item--current
-						a.header-menu__link(href= item.url)= item.text
-				else
-					li.header-menu__item
-						a.header-menu__link(href= item.url)= item.text
-
+				.header__contacts
+					a.header__phone(href="tel:+79268444410") +7 (926) 844-44-10
+					a.header__get-callback(href="#") Заказать звонок
+				a.header__btn.btn(href="#") Отправить заявку
 
 		button.header__menu-toggle.menu-toggle.__js_menu-open(type="button")
-			span.visually-hidden Menu
+			+icon('menu')(width="18", height="16")
+			span.visually-hidden Показать меню сайта
 
 
 
