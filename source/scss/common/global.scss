@@ -5,7 +5,6 @@ html {
 	-o-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	text-size-adjust: 100%;
-
 }
 
 *,
@@ -36,11 +35,16 @@ body {
 	-webkit-locale: auto;
 	white-space: normal;
 
-
 	main {
 		flex-grow: 1;
-		box-sizing: border-box;
-		padding-top: 100px;
+
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+
+		& > * {
+			width: 100%;
+		}
 	}
 }
 

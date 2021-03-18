@@ -16,8 +16,14 @@
 	cursor: pointer;
 
 	@include hover {
-
 		background-color: lighten($color-blue, 15%);
 	}
 
+	&--theme-white {
+		background-color: rgba($color-default-white, 0.2);
+
+		@include hover {
+			background-color: rgba($color-default-white, 0.4);
+		}
+	}
 }

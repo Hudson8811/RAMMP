@@ -1,8 +1,23 @@
 .webpage {
 	$self: &;
 
-
 	&--hidden {
 		overflow: hidden !important;
+	}
+
+	&__hero {
+		order: -1;
+	}
+
+	&__home-advantages {
+		@include media(xl) {
+			order: -1;
+
+			@include media-custom-height(800px) {
+				position: relative;
+				z-index: 1;
+				margin-top: -104px;
+			}
+		}
 	}
 }

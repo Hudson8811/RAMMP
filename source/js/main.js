@@ -157,6 +157,22 @@ function getScrollbarWidth() {
 })();
 
 
+(function() {
+	var heroSlider = new Swiper ('.__js_hero-slider', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		speed: 300,
+		loop: true,
+		pagination: {
+			el: '.hero__paginate',
+		},
+		navigation: {
+			nextEl: '.hero__nav-btn--next',
+			prevEl: '.hero__nav-btn--prev',
+		},
+	});
+})();
+
 
 /* accordion */
 /*(function () {

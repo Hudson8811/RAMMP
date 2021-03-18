@@ -11,6 +11,7 @@ $color-default-black: #000000;
 $color-dark: #0e1317;
 $color-dark2: #2c343d;
 $color-dark3: #2c3239;
+$color-dark4: #07192b;
 //$color-smoky: #f5f5f5;
 
 $color-grey: #424a54;
@@ -25,10 +26,11 @@ $color-base: $color-default-white; // основной цвет текста, и
 
 //
 $fonts: "Inter" "inter-regular" 400 normal, "Inter" "inter-medium" 500 normal,
-	"Inter" "inter-semibold" 600 normal, "Inter" "inter-bold" 700 normal;
+	"Inter" "inter-semibold" 600 normal, "Inter" "inter-bold" 700 normal,
+	"Rouble" "rouble" 400 normal;
 
 $font-family--main: "Inter", "Arial", sans-serif;
-//$font-family--secondary: "Roboto", "Open Sans", sans-serif;
+$font-family--rouble: "Rouble", "Arial", sans-serif;
 
 $font-size-base: 15px;
 $line-height-base: 1.33333; //22px
@@ -48,7 +50,7 @@ $breakpoints: (
 	md: 768px,
 	lg: 992px,
 	xl: 1200px,
-	xxl: 1560px,
+	xxl: 1440px,
 	xxx: 1920px,
 ) !default;
 
