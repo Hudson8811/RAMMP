@@ -5,6 +5,13 @@
 	display: block;
 	width: 100%;
 
+	&--filled {
+		#{$self}__hint {
+			//font-size: 12px;
+			transform: translateY(-180%) scale(0.8);
+		}
+	}
+
 	input,
 	textarea,
 	select {
@@ -31,9 +38,13 @@
 		top: 50%;
 		left: 0;
 		transform: translateY(-50%);
+		transform-origin: 0 50%;
+		pointer-events: none;
 
 		@include text();
 		letter-spacing: -0.0022em;
+
+		@include transition(transform);
 	}
 
 	&__message {

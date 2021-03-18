@@ -51,6 +51,32 @@ function getScrollbarWidth() {
 	}
 })();
 
+(function() {
+	var fields = $('.field input');
+	var modifier = 'field--filled';
+
+	fields.each(function() {
+		var field = $(this);
+		if (field.val()) {
+			field.parent().addClass(modifier);
+		}
+
+		field.on('focus', function() {
+			field.parent().addClass(modifier);
+		});
+
+		field.on('blur', function() {
+			if (!field.val()) {
+				field.parent().removeClass(modifier);
+			}
+		});
+	})
+})();
+
+(function() {
+	$('.__js_phone-mask input').inputmask({"mask": "+7 (999) 999-9999"});
+})();
+
 
 
 /* accordion */
