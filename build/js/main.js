@@ -77,6 +77,85 @@ function getScrollbarWidth() {
 	$('.__js_phone-mask input').inputmask({"mask": "+7 (999) 999-9999"});
 })();
 
+(function() {
+	// breakpoint where swiper will be destroyed
+	// and switches to a dual-column layout
+	const breakpoint = window.matchMedia( '(min-width:1200px)' );
+	// keep track of swiper instances to destroy later
+	let mySwiper;
+	//////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////
+	const breakpointChecker = function() {
+		// if larger viewport and multi-row layout needed
+		if ( breakpoint.matches === true ) {
+				// clean up old instances and inline styles when available
+				if ( mySwiper !== undefined ) mySwiper.destroy( true, true );
+				// or/and do nothing
+				return;
+		// else if a small viewport and single column layout needed
+		} else if ( breakpoint.matches === false ) {
+				// fire small viewport version of swiper
+				return enableSwiper();
+		}
+	};
+	//////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////
+	const enableSwiper = function() {
+		mySwiper = new Swiper ('.__js_catalog-carousel', {
+			slidesPerView: 1,
+			spaceBetween: 12,
+			speed: 300,
+			loop: true,
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			breakpoints: {
+				640: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				}
+			}
+		});
+	};
+	//////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////
+	// keep an eye on viewport size changes
+
+			//breakpoint.addListener(breakpointChecker);
+
+	// kickstart
+	breakpointChecker();
+
+	$(window).on('resize', function() {
+		breakpointChecker();
+	})
+
+
+	/*
+	var carousel = new Swiper('.__js_catalog-carousel', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		speed: 300,
+		loop: true,
+		pagination: {
+    	el: '.swiper-pagination',
+  	},
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			}
+		}
+	});*/
+})();
+
 
 
 /* accordion */

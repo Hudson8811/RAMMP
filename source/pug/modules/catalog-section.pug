@@ -1,0 +1,20 @@
+section.catalog-section
+	.catalog-section__inner.container
+		h2.catalog-section__heading Каталог продукции
+
+		.catalog-section__carousel.swiper-container.__js_catalog-carousel
+			.swiper-wrapper
+				.catalog-section__carousel-item.swiper-slide
+					each item in CATALOG_SLIDE_1
+						+catalog-card(item, 'catalog-section__carousel-card')
+				.catalog-section__carousel-item.swiper-slide
+					each item in CATALOG_SLIDE_2
+						+catalog-card(item, 'catalog-section__carousel-card')
+				.catalog-section__carousel-item.swiper-slide
+					each item in CATALOG_SLIDE_3
+						+catalog-card(item, 'catalog-section__carousel-card')
+				.catalog-section__carousel-item.swiper-slide
+					each item in CATALOG_SLIDE_4
+						+catalog-card(item, 'catalog-section__carousel-card')
+			.swiper-pagination
+

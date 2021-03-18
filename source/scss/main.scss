@@ -6,6 +6,7 @@
 @import "utils/normalize";
 @import "common/global";
 @import "common/utils";
+@import "vendor/swiper-bundle";
 @import "common/container";
 
 /* Components */
@@ -18,11 +19,13 @@
 @import "blocks/logo";
 @import "blocks/menu-toggle";
 @import "blocks/field";
+@import "blocks/catalog-card";
 
 /* Blocks */
 @import "blocks/menu";
 @import "blocks/advantages";
 @import "blocks/feedback";
+@import "blocks/catalog-section";
 
 @import "blocks/header";
 @import "blocks/footer";
