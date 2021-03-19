@@ -1,0 +1,30 @@
+.breadcrumbs {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: -5px;
+
+	&__item {
+		margin-top: 5px;
+		@include text(14px, 1.28571);
+		letter-spacing: -0.0016em;
+		align-self: center;
+
+		@include transition(color);
+
+		@include hover {
+			color: $color-orange;
+		}
+
+		&--current {
+			color: rgba($color-default-white, 0.4);
+			pointer-events: none;
+		}
+	}
+
+	&__separator {
+		margin: 5px 4px 0;
+
+		@include text(14px, 1.28571);
+		align-self: center;
+	}
+}

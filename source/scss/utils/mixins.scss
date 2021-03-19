@@ -82,6 +82,12 @@
 	}
 }
 
+@mixin only-ie {
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		@content;
+	}
+}
+
 // Transition проверить несколько свойств
 //---------------------------------------
 @mixin transition($args...) {
