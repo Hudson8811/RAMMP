@@ -1,0 +1,64 @@
+extends templates/main
+block variables
+	- let pageTitle = TITLE_PART + ' | Круг стальной';
+	- let isHome = false; //- Если true то логотип не будет ссылкой
+	- let currentPage = 6.02; // Для каждой страницы уникален. Номер смотреть в файле pug/templates/_vars.pug в массивах с пунктами меню
+	- let currentSection = 6; // // Для каждой раздела уникален. Home -1, projects - 2, news - 3, pages - 4
+	- let isAbsoluteHeader = true;
+	- let bc = [{text: 'Главная', url: 'home.html'}, {text: 'Металлопрокат', url: ''}, {text: 'Круг'}];
+
+block header
+	include modules/header
+
+block content
+	article.product
+		.product__image
+			img(src="img/product/product.png", srcset="img/product/product.png 2x", width="1038", height="480", alt="Стальной круг")
+
+		.container.container--small
+			header.product__header
+				h1.product__heading.page-heading Круг стальной
+				+breadcrumbs(bc, '/', 'product__breadcrumbs')
+			.table
+				ul.table__nav
+					each text, index in ['Единица', 'Цена, руб./тонна', 'Цена, руб./метр', 'Масса метра, кг.', 'Кол-во м. в тонне']
+						- let adCl3 = index === 0 ? 'table__nav-btn--active' : '';
+						li.table__nav-item
+							button.table__nav-btn(class= adCl3, type="button")= text
+				table
+					caption В таблице указаны оптовые цены. Итоговую стоимость уточняйте у наших менеджеров.
+					thead
+						tr
+							each th, index in ['ТМЦ', 'Единица', 'Цена, руб./тонна', 'Цена, руб./метр', 'Масса метра, кг.', 'Кол-во м. в тонне']
+								- let adCl2 = index > 1 ? 'hidden' : '';
+								th(class= adCl2)= th
+					tbody
+						each row in TABLE
+							tr
+								each td, index in row
+									- let adCl = index > 1 ? 'hidden' : '';
+									case index
+										when 2
+											td(class= adCl)
+												span.green
+													| #{td}
+													span.rouble a
+										when 3
+											td(class= adCl)
+												span.orange
+													| #{td}
+													span.rouble a
+										default
+											td(class= adCl)= td
+
+
+
+
+
+
+
+	include modules/consultation
+	include modules/advantages--full
+block footer
+	include modules/footer
+

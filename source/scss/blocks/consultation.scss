@@ -1,0 +1,33 @@
+.consultation {
+	padding: 40px 0;
+	background-color: $color-blue;
+
+	@include media(lg) {
+		padding: 80px 0;
+	}
+
+	&__heading {
+		margin: 0 0 8px;
+
+		@include text(24px, 1.16666);
+
+		@include media(md) {
+			flex-shrink: 0;
+			//margin-right: 9.30555vw;
+		}
+	}
+
+	&__main {
+	}
+
+	&__text {
+		margin: 0 0 32px;
+
+		@include text();
+		letter-spacing: -0.0022em;
+	}
+
+	&__manager {
+		margin-bottom: 24px;
+	}
+}

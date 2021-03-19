@@ -1,0 +1,25 @@
+.manager {
+	display: flex;
+
+	&__photo {
+		width: 90px;
+		height: 90px;
+		margin-right: 16px;
+		flex-shrink: 0;
+		border-radius: 50%;
+		overflow: hidden;
+
+		img {
+			@include image-block;
+		}
+	}
+
+	&__main {
+	}
+	&__name {
+	}
+	&__post {
+	}
+	&__email {
+	}
+}
