@@ -1,0 +1,26 @@
+.bordered-link {
+	display: inline-block;
+	vertical-align: top;
+
+	padding-bottom: 0.25em;
+
+	@include text(16px, 1.25);
+	letter-spacing: -0.0028em;
+	font-weight: 500;
+	border-bottom: dashed 1px rgba($color-default-white, 0.6);
+
+	@include transition(all);
+
+	@include hover {
+		border-bottom-style: solid;
+		border-bottom-color: $color-default-white;
+	}
+
+	&--large {
+		padding-bottom: 0.21875em;
+
+		@include text(32px, 1.25);
+		letter-spacing: 0.0044em;
+		font-weight: 600;
+	}
+}
