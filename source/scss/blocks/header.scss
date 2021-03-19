@@ -59,11 +59,11 @@
 
 		@include media(lg) {
 			flex-shrink: 0;
-			margin-right: 5.27777vw;
+			margin-right: 20px;
 		}
 
 		@include media(xl) {
-			margin-right: 76px;
+			//margin-right: 76px;
 		}
 	}
 
@@ -113,6 +113,7 @@
 				width: 100%;
 				flex-direction: row;
 				flex-wrap: wrap;
+				justify-content: flex-start;
 
 				& > * {
 					align-self: center;
@@ -124,9 +125,12 @@
 			position: static;
 			display: flex;
 			flex-grow: 1;
-			width: auto;
+			width: calc(100% - 110px);
+
+			max-width: 1204px;
 			height: auto;
 			min-height: 0;
+			margin-left: auto;
 			padding: 0;
 			background-color: transparent;
 		}
