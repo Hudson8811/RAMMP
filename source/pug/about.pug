@@ -1,0 +1,42 @@
+extends templates/main
+block variables
+	- let pageTitle = TITLE_PART + ' | О компании';
+	- let isHome = false; //- Если true то логотип не будет ссылкой
+	- let currentPage = 2.01; // Для каждой страницы уникален. Номер смотреть в файле pug/templates/_vars.pug в массивах с пунктами меню
+	- let currentSection = 2; // // Для каждой раздела уникален. Home -1, projects - 2, news - 3, pages - 4
+	//- let bodyModClass = ' webpage--inner';
+	- let bc = [{text: 'Главная', url: 'home.html'}, {text: 'О компании'}]
+
+block header
+	include modules/header
+
+block content
+	article.inner-page
+		.container.container--small
+			header.inner-page__header
+				+breadcrumbs(bc, '/', 'inner-page__breadcrumbs')
+				h1.inner-page__heading.page-heading Прокат, гибка, формование и резка металла в Раменском
+
+			.text-insertion Основной сферой деятельности Раменского завода является изготовление металлических конструкций всех типов на заказ, их реализация, сборка и доставка
+
+			.inner-page__grid.about-grid
+				.about-grid__item.about-grid__item--big.about-grid__item--one
+					img(src="img/about/1.jpg", srcset="img/about/1@2x.jpg 2x", width="537", height="537", alt="")
+				.about-grid__item
+					img(src="img/about/4.jpg", srcset="img/about/4@2x.jpg 2x", width="258", height="258", alt="")
+				.about-grid__item
+					img(src="img/about/5.jpg", srcset="img/about/5@2x.jpg 2x", width="258", height="258", alt="")
+
+				.about-grid__item.about-grid__item--big.about-grid__item--four
+					img(src="img/about/6.jpg", srcset="img/about/6@2x.jpg 2x", width="537", height="537", alt="")
+				.about-grid__item
+					img(src="img/about/2.jpg", srcset="img/about/2@2x.jpg 2x", width="258", height="258", alt="")
+				.about-grid__item
+					img(src="img/about/3.jpg", srcset="img/about/3@2x.jpg 2x", width="258", height="258", alt="")
+
+			.text-insertion В настоящее время Раменский завод металлических конструкций выпускает более 3000 тонн полностью готовых к монтажу конструкций каждый месяц и является одним из крупнейших производителей металлоконструкций в России.
+
+	include modules/feedback
+block footer
+	include modules/footer
+

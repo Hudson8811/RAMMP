@@ -1,0 +1,17 @@
+.page-heading {
+	margin: 0;
+
+	@include text(20px, 1.2);
+	letter-spacing: 0.0038em;
+	font-weight: 600;
+
+	@include media(md) {
+		font-size: 32px;
+	}
+
+	@include media(lg) {
+		font-size: 64px;
+		line-height: 1.15625;
+		font-weight: 400;
+	}
+}
