@@ -96,52 +96,17 @@
 	}
 
 	&__phone {
-		display: inline-block;
-		vertical-align: top;
-		padding-bottom: 7px;
-
-		@include text(32px, 1.25);
-		letter-spacing: 0.0044em;
-		font-weight: 600;
-		border-bottom: dashed 1px rgba($color-default-white, 0.6);
-
-		@include transition(all);
-
-		@include hover {
-			border-bottom-style: solid;
-			border-bottom-color: $color-default-white;
-		}
 	}
 
 	&__worktime {
 		margin-top: 16px;
 		margin-bottom: 32px;
-
-		@include text();
-		letter-spacing: -0.0022em;
-		opacity: 0.6;
 	}
 
 	&__address {
 		margin-bottom: 32px;
-
-		@include text();
-		letter-spacing: -0.0022em;
-		font-style: normal;
 	}
 
 	&__email {
-		padding-bottom: 4px;
-
-		@include text(16px, 1.25);
-		letter-spacing: -0.0028em;
-		border-bottom: dashed 1px rgba($color-default-white, 0.6);
-
-		@include transition(all);
-
-		@include hover {
-			border-bottom-style: solid;
-			border-bottom-color: $color-default-white;
-		}
 	}
 }

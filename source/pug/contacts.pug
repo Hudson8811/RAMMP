@@ -1,0 +1,43 @@
+extends templates/main
+block variables
+	- let pageTitle = TITLE_PART + ' | Контакты';
+	- let isHome = false; //- Если true то логотип не будет ссылкой
+	- let currentPage = 5.01; // Для каждой страницы уникален. Номер смотреть в файле pug/templates/_vars.pug в массивах с пунктами меню
+	- let currentSection = 5; // // Для каждой раздела уникален. Home -1, projects - 2, news - 3, pages - 4
+	//- let bodyModClass = ' webpage--inner';
+	- let bc = [{text: 'Главная', url: 'home.html'}, {text: 'Контакты'}]
+
+block header
+	include modules/header
+
+block content
+	article.inner-page
+		.container.container--small
+			header.inner-page__header
+				+breadcrumbs(bc, '/', 'inner-page__breadcrumbs')
+				h1.inner-page__heading.page-heading Позвоните нам, чтобы узнать цены и разместить заказ
+
+			section.inner-page__contacts.contacts
+				.contacts__main
+					.contacts__main-col
+						a.contacts__phone.bordered-link.bordered-link--large(href="tel:+79268444410") +7 (926) 844-44-10
+						.contacts__worktime.worktime Понедельник — Суббота с 09-00 до 18-00
+
+					.contacts__main-col.contacts__main-col--reverse
+						a.contacts__email.bordered-link.bordered-link--large(href="mailto:info@rammp.ru") info@rammp.ru
+						.contacts__hint Электронная почта
+
+					.contacts__main-col.contacts__main-col--full
+						.contacts__title Адрес проезда
+						address.contacts__address.address Московская область, <br>Раменское, Дорожный проезд, д. 11
+						.contacts__coord Широта 55°34′0″N (55.566669)
+						.contacts__coord Долгота 38°16′15″E (38.270701)
+
+
+				.contacts__map
+					iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Aceaa776bd2d91218cf2d8664a8b824489234542f8c5f241e1c3609a7aceee66c&amp;source=constructor" )
+
+	include modules/feedback
+block footer
+	include modules/footer
+
