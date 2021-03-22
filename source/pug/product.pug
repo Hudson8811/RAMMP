@@ -19,7 +19,7 @@ block content
 			header.product__header
 				h1.product__heading.page-heading Круг стальной
 				+breadcrumbs(bc, '/', 'product__breadcrumbs')
-			.table
+			.table.__js_adaptive-table
 				ul.table__nav
 					each text, index in ['Единица', 'Цена, руб./тонна', 'Цена, руб./метр', 'Масса метра, кг.', 'Кол-во м. в тонне']
 						- let adCl3 = index === 0 ? 'table__nav-btn--active' : '';

@@ -1686,6 +1686,12 @@ button.swiper-pagination-bullet {
   margin-bottom: 16px;
 }
 
+@media (min-width: 768px) {
+  .table__nav {
+    display: none;
+  }
+}
+
 .table__nav-item {
   margin-right: 8px;
   margin-bottom: 8px;
@@ -1698,6 +1704,10 @@ button.swiper-pagination-bullet {
   color: #ffffff;
   border: none;
   background-color: #2c3239;
+}
+
+.table__nav-btn:focus {
+  outline: none;
 }
 
 .table__nav-btn--active {
@@ -1722,6 +1732,7 @@ button.swiper-pagination-bullet {
 
 .table th {
   min-width: 107px;
+  min-height: 59px;
   padding: 25px 12px 25px 0;
   font-size: 14px;
   line-height: 1.28571;
@@ -1802,6 +1813,29 @@ button.swiper-pagination-bullet {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.manager__main {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.manager__name {
+  margin: 0 0 4px;
+  font-size: 24px;
+  line-height: 1.16666;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.0036em;
+}
+
+.manager__post {
+  margin: 0 0 8px;
+  font-size: 15px;
+  line-height: 1.33333;
+  color: #ffffff;
+  letter-spacing: -0.0022em;
 }
 
 .menu__list {
@@ -2066,8 +2100,10 @@ button.swiper-pagination-bullet {
   }
 }
 
-.feedback__form {
-  max-width: 648px;
+@media (min-width: 768px) {
+  .feedback__form {
+    max-width: 648px;
+  }
 }
 
 .feedback__form-text {
@@ -2849,17 +2885,34 @@ button.swiper-pagination-bullet {
   }
 }
 
+@media (min-width: 768px) {
+  .consultation__inner {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .consultation__heading {
   margin: 0 0 8px;
   font-size: 24px;
   line-height: 1.16666;
   color: #ffffff;
+  letter-spacing: 0.0036em;
 }
 
 @media (min-width: 768px) {
   .consultation__heading {
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
+    width: 100%;
+    max-width: 334px;
+    margin-bottom: 0;
+    padding-right: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .consultation__main {
+    max-width: 648px;
+    margin-left: auto;
   }
 }
 
@@ -2873,6 +2926,10 @@ button.swiper-pagination-bullet {
 
 .consultation__manager {
   margin-bottom: 24px;
+}
+
+.consultation__worktime {
+  margin-top: 16px;
 }
 
 .inner-page {

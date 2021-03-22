@@ -173,6 +173,26 @@ function getScrollbarWidth() {
 	});
 })();
 
+(function() {
+	var table = $('.__js_adaptive-table');
+	var buttons = $('.table__nav-btn');
+	var btnCl = 'table__nav-btn--active';
+	var th = $('.table th');
+	var tr = $('.table tr');
+	var cellCl = 'hidden';
+
+	buttons.on('click', function() {
+		var btn = $(this);
+		var index = buttons.index(btn);
+
+		btn.addClass(btnCl).parent().siblings().find('button').removeClass(btnCl);
+		th.not(':first-child').addClass(cellCl);
+		tr.find('td').not(':first-child').addClass(cellCl);
+		th.eq(index + 1).removeClass(cellCl);
+		tr.find('td:nth-child(' + (index + 1) + ')').removeClass(cellCl)
+	});
+})();
+
 
 /* accordion */
 /*(function () {

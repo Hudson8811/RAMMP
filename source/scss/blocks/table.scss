@@ -9,6 +9,10 @@
 		margin-left: -32px;
 		margin-bottom: 16px;
 
+		@include media(md) {
+			display: none;
+		}
+
 		&-item {
 			margin-right: 8px;
 			margin-bottom: 8px;
@@ -20,6 +24,10 @@
 			@include text();
 			border: none;
 			background-color: $color-dark3;
+
+			&:focus {
+				outline: none;
+			}
 
 			&--active {
 				background-color: $color-orange;
@@ -47,6 +55,7 @@
 
 	th {
 		min-width: 107px;
+		min-height: 59px;
 		padding: 25px 12px 25px 0;
 
 		@include text(14px, 1.28571);
