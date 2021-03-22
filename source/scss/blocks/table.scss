@@ -1,0 +1,110 @@
+.table {
+	padding: 0 32px;
+
+	&__nav {
+		@include list-reset;
+		display: flex;
+		flex-wrap: wrap;
+		width: calc(100% + 64px);
+		margin-left: -32px;
+		margin-bottom: 16px;
+
+		@include media(md) {
+			display: none;
+		}
+
+		&-item {
+			margin-right: 8px;
+			margin-bottom: 8px;
+		}
+
+		&-btn {
+			padding: 8px 16px;
+
+			@include text();
+			border: none;
+			background-color: $color-dark3;
+
+			&:focus {
+				outline: none;
+			}
+
+			&--active {
+				background-color: $color-orange;
+			}
+		}
+	}
+
+	table {
+		width: 100%;
+		border: none;
+		border-collapse: collapse;
+	}
+
+	tr {
+		background-color: $color-dark3;
+		box-shadow: -32px 0 0 0 $color-dark3, 32px 0 0 0 $color-dark3;
+	}
+
+	thead {
+		tr {
+			background-color: $color-grey2;
+			box-shadow: -32px 0 0 0 $color-grey2, 32px 0 0 0 $color-grey2;
+		}
+	}
+
+	th {
+		min-width: 107px;
+		min-height: 59px;
+		padding: 25px 12px 25px 0;
+
+		@include text(14px, 1.28571);
+		letter-spacing: -0.0016em;
+		font-weight: 400;
+		text-align: left;
+		border-bottom: 1px solid #424a54;
+
+		&:first-child {
+			width: 50%;
+
+			@include media(md) {
+				width: 26.45914%;
+			}
+		}
+	}
+
+	td {
+		min-width: 107px;
+		padding: 20px 12px 20px 0;
+
+		@include text(14px, 1.28571);
+		letter-spacing: -0.0016em;
+		border-top: 1px solid #424a54;
+
+		&:first-child {
+			width: 50%;
+
+			@include media(md) {
+				width: 26.45914%;
+			}
+		}
+	}
+
+	caption {
+		margin-top: 20px;
+		caption-side: bottom;
+
+		@include text();
+		opacity: 0.4;
+		letter-spacing: -0.0022em;
+		text-align: center;
+	}
+
+	.hidden {
+		display: none;
+
+		@include media(md) {
+			display: table-cell;
+		}
+	}
+}

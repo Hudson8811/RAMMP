@@ -40,7 +40,9 @@
 	}
 
 	&__form {
-		max-width: 648px;
+		@include media(md) {
+			max-width: 648px;
+		}
 
 		&-text {
 			margin-bottom: 25px;

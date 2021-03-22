@@ -14,7 +14,7 @@
   <meta name="theme-color" content="#ffffff">
   <!-- CSS-->
   <link rel="stylesheet" href="css/main.css">
-  <title>Раменский металлопрокат | О компании</title>
+  <title>Раменский металлопрокат | Круг стальной</title>
 </head>
 
 <body class="webpage">
@@ -50,7 +50,7 @@
       </symbol>
     </svg>
   </div>
-  <header class="header">
+  <header class="header header--absolute">
     <div class="header__inner container">
       <a class="header__logo logo" href="home.html">
         <img src="img/logo.svg" width="91" height="88" alt="Логотип Раменский металлопрокат" />
@@ -69,8 +69,8 @@
               <li class="menu__item">
                 <a class="menu__link" href="home.html">Главная</a>
               </li>
-              <li class="menu__item menu__item--current">
-                <a class="menu__link">О Компании</a>
+              <li class="menu__item">
+                <a class="menu__link" href="about.html">О Компании</a>
               </li>
               <li class="menu__item">
                 <a class="menu__link" href="#">Услуги</a>
@@ -99,67 +99,184 @@
     </div>
   </header>
   <main>
-    <article class="inner-page">
+    <article class="product">
+      <div class="product__image">
+        <img src="img/product/product.png" srcset="img/product/product.png 2x" width="1038" height="480" alt="Стальной круг">
+      </div>
       <div class="container container--small">
-        <header class="inner-page__header">
-          <div class="inner-page__breadcrumbs breadcrumbs" role="list">
+        <header class="product__header">
+          <h1 class="product__heading page-heading">Круг стальной</h1>
+          <div class="product__breadcrumbs breadcrumbs" role="list">
             <a class="breadcrumbs__item" href="home.html" role="listitem">Главная</a>
             <span class="breadcrumbs__separator">/</span>
-            <a class="breadcrumbs__item breadcrumbs__item--current" role="listitem">О компании</a>
+            <a class="breadcrumbs__item" href="" role="listitem">Металлопрокат</a>
+            <span class="breadcrumbs__separator">/</span>
+            <a class="breadcrumbs__item breadcrumbs__item--current" role="listitem">Круг</a>
           </div>
-          <h1 class="inner-page__heading page-heading">Прокат, гибка, формование и резка металла в Раменском</h1>
         </header>
-        <div class="text-insertion">Основной сферой деятельности Раменского завода является изготовление металлических конструкций всех типов на заказ, их реализация, сборка и доставка</div>
-        <div class="inner-page__grid about-grid">
-          <div class="about-grid__item about-grid__item--big about-grid__item--one">
-            <img src="img/about/1.jpg" srcset="img/about/1@2x.jpg 2x" width="537" height="537" alt="">
-          </div>
-          <div class="about-grid__item">
-            <img src="img/about/4.jpg" srcset="img/about/4@2x.jpg 2x" width="258" height="258" alt="">
-          </div>
-          <div class="about-grid__item">
-            <img src="img/about/5.jpg" srcset="img/about/5@2x.jpg 2x" width="258" height="258" alt="">
-          </div>
-          <div class="about-grid__item about-grid__item--big about-grid__item--four">
-            <img src="img/about/6.jpg" srcset="img/about/6@2x.jpg 2x" width="537" height="537" alt="">
-          </div>
-          <div class="about-grid__item">
-            <img src="img/about/2.jpg" srcset="img/about/2@2x.jpg 2x" width="258" height="258" alt="">
-          </div>
-          <div class="about-grid__item">
-            <img src="img/about/3.jpg" srcset="img/about/3@2x.jpg 2x" width="258" height="258" alt="">
-          </div>
+        <div class="table __js_adaptive-table">
+          <ul class="table__nav">
+            <li class="table__nav-item">
+              <button class="table__nav-btn table__nav-btn--active" type="button">Единица</button>
+            </li>
+            <li class="table__nav-item">
+              <button class="table__nav-btn" type="button">Цена, руб./тонна</button>
+            </li>
+            <li class="table__nav-item">
+              <button class="table__nav-btn" type="button">Цена, руб./метр</button>
+            </li>
+            <li class="table__nav-item">
+              <button class="table__nav-btn" type="button">Масса метра, кг.</button>
+            </li>
+            <li class="table__nav-item">
+              <button class="table__nav-btn" type="button">Кол-во м. в тонне</button>
+            </li>
+          </ul>
+          <table>
+            <caption>В таблице указаны оптовые цены. Итоговую стоимость уточняйте у наших менеджеров.</caption>
+            <thead>
+              <tr>
+                <th>ТМЦ</th>
+                <th>Единица</th>
+                <th class="hidden">Цена, руб./тонна</th>
+                <th class="hidden">Цена, руб./метр</th>
+                <th class="hidden">Масса метра, кг.</th>
+                <th class="hidden">Кол-во м. в тонне</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Круг стальной Ø20 мм.</td>
+                <td>Тонна</td>
+                <td class="hidden">
+                  <span class="green">86 150<span class="rouble">a</span>
+                  </span>
+                </td>
+                <td class="hidden">
+                  <span class="orange">102<span class="rouble">a</span>
+                  </span>
+                </td>
+                <td class="hidden">2,47</td>
+                <td class="hidden">405</td>
+              </tr>
+              <tr>
+                <td>Круг стальной Ø22 мм.</td>
+                <td>Тонна</td>
+                <td class="hidden">
+                  <span class="green">86 150<span class="rouble">a</span>
+                  </span>
+                </td>
+                <td class="hidden">
+                  <span class="orange">123<span class="rouble">a</span>
+                  </span>
+                </td>
+                <td class="hidden">2,98</td>
+                <td class="hidden">336</td>
+              </tr>
+              <tr>
+                <td>Круг стальной Ø24 мм.</td>
+                <td>Тонна</td>
+                <td class="hidden">
+                  <span class="green">86 150<span class="rouble">a</span>
+                  </span>
+                </td>
+                <td class="hidden">
+                  <span class="orange">147<span class="rouble">a</span>
+                  </span>
+                </td>
+                <td class="hidden">3,55</td>
+                <td class="hidden">282</td>
+              </tr>
+              <tr>
+                <td>Круг стальной Ø25 мм.</td>
+                <td>Тонна</td>
+                <td class="hidden">
+                  <span class="green">86 150<span class="rouble">a</span>
+                  </span>
+                </td>
+                <td class="hidden">
+                  <span class="orange">160<span class="rouble">a</span>
+                  </span>
+                </td>
+                <td class="hidden">3,85</td>
+                <td class="hidden">260</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <div class="text-insertion">В настоящее время Раменский завод металлических конструкций выпускает более 3000 тонн полностью готовых к монтажу конструкций каждый месяц и является одним из крупнейших производителей металлоконструкций в России.</div>
       </div>
     </article>
-    <section class="feedback">
-      <div class="feedback__inner container container--small">
-        <h2 class="feedback__heading">Оставить заявку</h2>
-        <div class="feedback__form">
-          <div class="feedback__form-text">Оставьте свои контакты и мы свяжемся с вами, как можно скорее</div>
-          <form action="#" method="post">
-            <label class="feedback__field feedback__field--half field">
-              <input type="text" name="name">
-              <span class="field__hint">Имя</span>
-              <span class="field__message"></span>
-            </label>
-            <label class="feedback__field feedback__field--half field __js_phone-mask">
-              <input type="tel" name="phone" requred>
-              <span class="field__hint">Номер телефона</span>
-              <span class="field__message"></span>
-            </label>
-            <label class="feedback__field field">
-              <input type="email" name="email">
-              <span class="field__hint">E-mail</span>
-              <span class="field__message"></span>
-            </label>
-            <div class="feedback__form-bottom">
-              <button type="submit">Отправить</button>
-              <div class="feedback__form-consent">Нажимая на кнопку, вы даете согласие на обработку персональных данных</div>
+    <section class="consultation">
+      <div class="consultation__inner container container--small">
+        <h2 class="consultation__heading">Бесплатная консультация менеджера</h2>
+        <div class="consultation__main">
+          <div class="consultation__text">Вы можете обсудить с менеджером любые вопросы по вашему заказу — он сориентирует вас по составу работ, срокам и стоимости.</div>
+          <div class="consultation__manager manager">
+            <div class="manager__photo">
+              <img src="img/manager.png" width="90" height="90" alt="Менеджер Николай">
             </div>
-          </form>
+            <div class="manager__main">
+              <div class="manager__name">Николай</div>
+              <div class="manager__post">Руководитель отдела продаж</div>
+              <a class="manager__email bordered-link" href="mailto:info@rammp.ru">info@rammp.ru</a>
+            </div>
+          </div>
+          <div class="consultation__info">
+            <a class="consultation__phone bordered-link bordered-link--large" href="tel:+79268444410">+7 (926) 844-44-10</a>
+            <div class="consultation__worktime worktime">Понедельник — Суббота с 09-00 до 18-00</div>
+          </div>
         </div>
+      </div>
+    </section>
+    <section class="advantages">
+      <div class="advantages__inner container">
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <div class="advantages__item-icon">
+              <svg width="20" height="20">
+                <use xlink:href="#graph"></use>
+              </svg>
+            </div>
+            <div class="advantages__item-title">Оптовые цены</div>
+            <div class="advantages__item-text">Для физических лиц и организаций</div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__item-icon">
+              <svg width="20" height="12">
+                <use xlink:href="#truck"></use>
+              </svg>
+            </div>
+            <div class="advantages__item-title">Доставка</div>
+            <div class="advantages__item-text">Оперативная доставка по Московской области</div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__item-icon">
+              <svg width="20" height="20">
+                <use xlink:href="#saw"></use>
+              </svg>
+            </div>
+            <div class="advantages__item-title">Резка металла</div>
+            <div class="advantages__item-text">Осуществляем резку металла в размер</div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__item-icon">
+              <svg width="20" height="18">
+                <use xlink:href="#calendar"></use>
+              </svg>
+            </div>
+            <div class="advantages__item-title">Без выходных</div>
+            <div class="advantages__item-text">Работаем без выходных и праздников</div>
+          </li>
+          <li class="advantages__item">
+            <div class="advantages__item-icon">
+              <svg width="20" height="20">
+                <use xlink:href="#terminal"></use>
+              </svg>
+            </div>
+            <div class="advantages__item-title">Способы оплаты</div>
+            <div class="advantages__item-text">Наличный и безналичный расчёт</div>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -198,8 +315,8 @@
         <li class="footer__menu-item">
           <a class="footer__menu-link" href="#">Прайс-лист</a>
         </li>
-        <li class="footer__menu-item footer__menu-item--current">
-          <a class="footer__menu-link">О Компании</a>
+        <li class="footer__menu-item">
+          <a class="footer__menu-link" href="about.html">О Компании</a>
         </li>
         <li class="footer__menu-item">
           <a class="footer__menu-link" href="contacts.html">Контакты</a>
