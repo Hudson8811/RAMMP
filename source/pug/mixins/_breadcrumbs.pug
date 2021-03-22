@@ -1,8 +1,8 @@
 mixin breadcrumbs(arr, sep, cl)
-	div(class= cl ? cl + ' breadcrumbs' : 'breadcrumbs', role="list")
+	div(class= cl ? cl + ' breadcrumbs' : 'breadcrumbs')
 		each item, index in arr
 			if index === arr.length - 1
-				a.breadcrumbs__item.breadcrumbs__item--current(role="listitem")= item.text
+				a.breadcrumbs__item.breadcrumbs__item--current= item.text
 			else
-				a.breadcrumbs__item(href= item.url, role="listitem")= item.text
+				a.breadcrumbs__item(href= item.url)= item.text
 				span.breadcrumbs__separator= sep
