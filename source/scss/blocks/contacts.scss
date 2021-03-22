@@ -32,6 +32,7 @@
 					flex-direction: column-reverse;
 					order: 1;
 					margin-bottom: 0;
+					transform: translateY(5px);
 
 					& > * {
 						align-self: flex-start;
@@ -51,7 +52,7 @@
 	}
 
 	&__title {
-		margin: 0 0 12px;
+		margin: 0 0 14px;
 
 		@include text(24px, 1.16666);
 		font-weight: 500;
@@ -59,7 +60,7 @@
 	}
 
 	&__hint {
-		margin-top: 8px;
+		margin-top: 12px;
 
 		@include text();
 		opacity: 0.4;
@@ -93,7 +94,7 @@
 	}
 
 	&__worktime {
-		margin-top: 8px;
+		margin-top: 12px;
 
 		@include media(md) {
 			margin-top: 16px;
@@ -101,7 +102,7 @@
 	}
 
 	&__address {
-		margin-bottom: 16px;
+		margin-bottom: 19px;
 	}
 
 	&__coord {

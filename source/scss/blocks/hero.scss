@@ -35,7 +35,7 @@
 		}
 
 		@include media(xxl) {
-			padding-bottom: 264px;
+			padding-bottom: 266px;
 		}
 
 		&::before {
@@ -75,21 +75,23 @@
 			margin-bottom: 20px;
 
 			@include text(16px, 1.25);
-			letter-spacing: 0.0028em;
+			letter-spacing: -0.0028em;
 
 			span:not(.rouble) {
-				@include text(48px, 1.16666, $color-orange);
+				@include text(48px, 1, $color-orange);
 				letter-spacing: 0.0066em;
 				font-weight: 700;
 			}
 
 			.rouble {
-				font-size: 32px;
+				margin-left: 4px;
+				font-size: 27px;
 			}
 
 			@include media(lg) {
 				order: 1;
 				margin-left: auto;
+				margin-right: 20px;
 			}
 		}
 
@@ -148,7 +150,9 @@
 		.swiper-pagination-bullet {
 			position: relative;
 			counter-increment: bullets;
-			margin: 0 8px 0 0;
+			width: 6px;
+			height: 6px;
+			margin: 0 8px 0 0 !important;
 			background-color: $color-default-white;
 			align-self: center;
 			opacity: 1;
@@ -218,7 +222,7 @@
 		}
 
 		@include media(xl) {
-			padding-right: 93px;
+			padding-right: 113px;
 		}
 
 		@include media(xxl) {

@@ -10,6 +10,8 @@
 
 	&__heading {
 		margin: 0 0 32px;
+		letter-spacing: 0.036em;
+		font-weight: 500;
 
 		@include media(lg) {
 			margin-bottom: 40px;

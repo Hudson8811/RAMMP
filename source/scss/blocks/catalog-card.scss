@@ -94,6 +94,7 @@
 	}
 
 	&__title {
+		max-width: 125px;
 		margin: 0 0 20px;
 
 		@include text(20px, 1.2);

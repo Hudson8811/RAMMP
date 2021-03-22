@@ -134,9 +134,9 @@ function getScrollbarWidth() {
 		spaceBetween: 0,
 		speed: 300,
 		loop: true,
-		autoplay: {
+		/*autoplay: {
    		delay: autoplayDelay,
- 		},
+ 		},*/
 		pagination: {
 			el: '.hero__paginate',
 			clickable: true,

@@ -1,9 +1,9 @@
 .feedback {
-	padding: 40px 0;
+	padding: 42px 0;
 	background-color: $color-blue;
 
 	@include media(lg) {
-		padding: 112px 0 88px;
+		padding: 112px 0 80px;
 	}
 
 	&__inner {
@@ -42,6 +42,7 @@
 	&__form {
 		@include media(md) {
 			max-width: 648px;
+			padding-top: 7px;
 		}
 
 		&-text {
@@ -86,7 +87,7 @@
 				display: block;
 				width: 100%;
 				min-width: 200px;
-				margin-bottom: 16px;
+				margin-bottom: 21px;
 				box-shadow: 0 0 0 1px rgba($color-default-white, 0.2);
 
 				@include media(md) {

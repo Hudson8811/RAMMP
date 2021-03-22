@@ -104,11 +104,15 @@
 		}
 
 		&-title {
-			margin-bottom: 6px;
+			margin-bottom: 4px;
 
 			@include text(20px, 1.2);
 			letter-spacing: 0.0038em;
 			font-weight: 600;
+
+			@include media(xl) {
+				margin-bottom: 6px;
+			}
 		}
 
 		&-text {
