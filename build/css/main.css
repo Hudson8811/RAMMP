@@ -3059,6 +3059,7 @@ button.swiper-pagination-bullet {
   max-width: 1920px;
   pointer-events: none;
   text-align: right;
+  overflow: hidden;
 }
 
 .product__image::before {

@@ -20,6 +20,7 @@
 		max-width: 1920px;
 		pointer-events: none;
 		text-align: right;
+		overflow: hidden;
 
 		&::before {
 			content: "";
