@@ -78,14 +78,8 @@ function getScrollbarWidth() {
 })();
 
 (function() {
-	// breakpoint where swiper will be destroyed
-	// and switches to a dual-column layout
 	const breakpoint = window.matchMedia( '(min-width:1200px)' );
-	// keep track of swiper instances to destroy later
 	let mySwiper;
-	//////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////
 	const breakpointChecker = function() {
 		// if larger viewport and multi-row layout needed
 		if ( breakpoint.matches === true ) {
@@ -99,72 +93,56 @@ function getScrollbarWidth() {
 				return enableSwiper();
 		}
 	};
-	//////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////
-	const enableSwiper = function() {
-		mySwiper = new Swiper ('.__js_catalog-carousel', {
-			slidesPerView: 1,
-			spaceBetween: 12,
-			speed: 300,
-			loop: true,
-			pagination: {
-				el: '.swiper-pagination',
-			},
-			breakpoints: {
-				640: {
-					slidesPerView: 2,
+
+	const sl = document.querySelector('.__js_catalog-carousel');
+
+	if (sl) {
+		const enableSwiper = function() {
+			mySwiper = new Swiper ('.__js_catalog-carousel', {
+				slidesPerView: 1,
+				spaceBetween: 12,
+				speed: 300,
+				loop: true,
+				pagination: {
+					el: '.swiper-pagination',
 				},
-				992: {
-					slidesPerView: 3,
+				breakpoints: {
+					640: {
+						slidesPerView: 2,
+					},
+					992: {
+						slidesPerView: 3,
+					}
 				}
-			}
-		});
-	};
-	//////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////
-	// keep an eye on viewport size changes
+			});
+		};
 
-			//breakpoint.addListener(breakpointChecker);
-
-	// kickstart
-	breakpointChecker();
-
-	$(window).on('resize', function() {
 		breakpointChecker();
-	})
 
-
-	/*
-	var carousel = new Swiper('.__js_catalog-carousel', {
-		slidesPerView: 1,
-		spaceBetween: 20,
-		speed: 300,
-		loop: true,
-		pagination: {
-    	el: '.swiper-pagination',
-  	},
-		breakpoints: {
-			576: {
-				slidesPerView: 2,
-			},
-			768: {
-				slidesPerView: 3,
-			}
-		}
-	});*/
+		$(window).on('resize', function() {
+			breakpointChecker();
+		});
+	}
 })();
 
 
 (function() {
+	var autoplayDelay = 5000;
+
 	var heroSlider = new Swiper ('.__js_hero-slider', {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		speed: 300,
 		loop: true,
+		autoplay: {
+   		delay: autoplayDelay,
+ 		},
 		pagination: {
 			el: '.hero__paginate',
+			clickable: true,
+        renderBullet: function (index, className) {
+					return '<span class="' + className + '"><svg width="32" height="32" viewBox="0 0 32 32"><circle style="animation-duration: ' + (autoplayDelay + 50) + 'ms" cx="16" cy="16" r="15" fill="none"></circle></svg></span>';
+        },
 		},
 		navigation: {
 			nextEl: '.hero__nav-btn--next',

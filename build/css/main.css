@@ -2451,6 +2451,7 @@ button.swiper-pagination-bullet {
 }
 
 .hero__paginate .swiper-pagination-bullet {
+  position: relative;
   counter-increment: bullets;
   margin: 0 8px 0 0;
   background-color: #ffffff;
@@ -2458,6 +2459,22 @@ button.swiper-pagination-bullet {
       -ms-grid-row-align: center;
       align-self: center;
   opacity: 1;
+}
+
+.hero__paginate .swiper-pagination-bullet svg {
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  display: none;
+  -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+}
+
+.hero__paginate .swiper-pagination-bullet svg circle {
+  stroke-width: 2px;
+  stroke: #ffffff;
+  stroke-dashoffset: 94;
+  stroke-dasharray: 94;
 }
 
 .hero__paginate .swiper-pagination-bullet-active {
@@ -2470,6 +2487,15 @@ button.swiper-pagination-bullet {
   border: solid 2px rgba(255, 255, 255, 0.4);
   box-sizing: border-box;
   background-color: transparent;
+}
+
+.hero__paginate .swiper-pagination-bullet-active svg {
+  display: block;
+}
+
+.hero__paginate .swiper-pagination-bullet-active svg circle {
+  animation: draw-crc 5s linear;
+  animation-fill-mode: forwards;
 }
 
 .hero__paginate .swiper-pagination-bullet-active::before {
@@ -2563,6 +2589,15 @@ button.swiper-pagination-bullet {
 .hero__nav-btn--prev svg {
   -ms-transform: rotate(180deg);
       transform: rotate(180deg);
+}
+
+@keyframes draw-crc {
+  from {
+    stroke-dashoffset: 94;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .about-grid {
@@ -3276,7 +3311,7 @@ button.swiper-pagination-bullet {
 
 @media (min-width: 992px) {
   .header__phone:hover, .header__phone:focus {
-    color: #1685f4;
+    color: #ff5722;
     text-decoration: none;
   }
 }
